@@ -16,3 +16,7 @@
 .txt-space {
   letter-spacing: 0.1em;
 }
+
+.txt-top {
+  letter-spacing: 0.2vh;
+}
