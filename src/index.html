@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Logistic Hub Parcel's Management</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <style>
+      .navbar .navbar-nav .nav-link:hover,
+      .navbar .navbar-nav .nav-link:focus,
+      .navbar .navbar-nav .nav-link:active {
+        background-color: rgb(255, 157, 0);
+        font-weight: bold;
+        color: white;
+      }
+
+      .navbar .navbar-nav .nav-link.active {
+        background-color: rgb(255, 157, 0) !important;
+        color: white !important;
+      }
+
+      .navbar-brand {
+        font-weight: bold;
+        color: white !important;
+      }
+
+      .navbar {
+        background-color: #fc3c3c;
+        -webkit-box-shadow: 0 8px 6px -6px #960000;
+        -moz-box-shadow: 0 8px 6px -6px #960000;
+        box-shadow: 0 8px 6px -6px #960000;
+      }
+
+      .navbar .navbar-nav,
+      .nav-item,
+      .navbar-link {
+        color: rgb(255, 255, 255) !important;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg p-3">
+      <img
+        src="https://i.ibb.co/5r6fWHJ/truck.png"
+        alt="logoparcel"
+        width="80"
+        height="45"
+        class="d-inline-block align-top"
+        alt=""
+      />
+      <a class="navbar-brand" href="/category/home"
+        >Logtistic Hub Parcel's Management</a
+      >
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/category/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/category/index">Parcel List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Your content goes here -->
+    <app-root></app-root>
+
+    <!-- Bootstrap JS (optional, if you need to use Bootstrap's JavaScript components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
