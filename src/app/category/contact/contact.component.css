@@ -1,0 +1,18 @@
+.bg-image {
+  background-image: url('https://5.imimg.com/data5/SELLER/Default/2023/5/311033042/GP/FW/BR/107571481/parcel-delivery-service-500x500.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-bg {
+  background: linear-gradient(45deg, #f02929, #e2991a) !important;
+}
+
+.btn-red {
+  background-color: #efb300;
+}
+
+.txt-space {
+  letter-spacing: 0.1em;
+}
