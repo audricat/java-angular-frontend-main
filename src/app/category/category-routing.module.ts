@@ -5,6 +5,7 @@ import { ViewComponent } from './view/view.component';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   { path: 'category', redirectTo: 'category/index', pathMatch: 'full'},
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'category/:categoryId/view', component: ViewComponent },
   { path: 'category/create', component: CreateComponent },
   { path: 'category/:categoryId/edit', component: EditComponent },
-  { path: 'category/home', component: HomeComponent }
+  { path: 'category/home', component: HomeComponent },
+  { path: 'category/contact', component: ContactComponent }
 ];
 
 @NgModule({

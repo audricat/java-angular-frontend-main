@@ -5,12 +5,12 @@
                     <div class="d-flex align-items-end">
                       <div class="col-sm-7">
                         <div class="card-body">
-                          <h5 class="card-title fw-bold">Welcome to Parcel's Management</h5>
+                          <h5 class="card-title fw-bold text-danger">Welcome to Parcel's Management</h5>
                           <p class="mb-4">
                             Add a<span class="fw-semibold text-danger"> parcel and search. </span>To add more features, click the button below.
                           </p>
 
-                          <a href="\component\contact" class="btn btn-sm btn-outline-danger fw-semibold">Contact Us</a>
+                          <a href="\category\contact" class="btn btn-sm btn-outline-danger fw-semibold">Contact Us</a>
                         </div>
                       </div>
                       <div class="col-sm-5 text-center text-sm-left">
@@ -34,7 +34,7 @@
     <div class="col-md-6 d-flex justify-content-end">
       <form class="form-inline" role="search">
         <input class="form-control mr-2 search-form" type="search" (ngModelChange)="searchCategories(key.value)" name="key" #key="ngModel" ngModel placeholder="Type here"aria-label="Search">
-        <button class="btn btn-danger" type="submit">Search</button>
+        <button class="btn btn-primary" type="submit">Search</button>
       </form>
     </div>
   </div>
