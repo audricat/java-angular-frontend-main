@@ -16,7 +16,7 @@ export class IndexComponent implements OnInit {
     --------------------------------------------
     --------------------------------------------*/
   constructor(public categoryService: CategoryService) { }
-    
+
   /**
    * Write code on Method
    *
@@ -26,7 +26,22 @@ export class IndexComponent implements OnInit {
     this.categoryService.getAll().subscribe((data: Category[])=>{
       this.categories = data;
       console.log(this.categories);
-    })  
+    })
+  }
+
+  public searchCategories(key: string): void {
+    const results: Category[] = [];
+    for(const category of this.categories) {
+      if (category.name.toLowerCase().indexOf(key.toLowerCase()) !== -1
+      || category.description.toLowerCase().indexOf(key.toLowerCase()) !== -1
+      || category.id.toString().indexOf(key) !== -1) {
+        results.push(category);
+      }
+    }
+    this.categories = results;
+    if(results.length === 0 || !key) {
+      this.ngOnInit();
+    }
   }
 
   /**
