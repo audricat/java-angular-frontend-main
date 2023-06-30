@@ -9,9 +9,10 @@ import { EditComponent } from './edit/edit.component';
    
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
    
 @NgModule({
-  declarations: [IndexComponent, ViewComponent, CreateComponent, EditComponent, HomeComponent],
+  declarations: [IndexComponent, ViewComponent, CreateComponent, EditComponent, HomeComponent, ContactComponent],
   imports: [
     CommonModule,
     CategoryRoutingModule,
