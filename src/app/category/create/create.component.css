@@ -1,3 +1,10 @@
 .bg-color {
-  background-color: #6473F5;
+  background-color: #ffbf51;
+}
+.cropped1 {
+  width: 200px;
+  /* width of container */
+  height: 200px;
+  /* height of container */
+  object-fit: cover;
 }
