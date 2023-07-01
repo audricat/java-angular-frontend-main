@@ -50,12 +50,9 @@ export class IndexComponent implements OnInit {
    * @return response()
    */
   deleteCategory(id: number) {
-    if (confirm('Are you sure you want to delete this category?')) {
-      this.categoryService.delete(id).subscribe(res => {
-        this.categories = this.categories.filter(item => item.id !== id);
-        console.log('Category deleted successfully!');
-      });
-    }
+    this.categoryService.delete(id).subscribe(res => {
+      this.categories = this.categories.filter(item => item.id !== id);
+      console.log('Category deleted successfully!');
+    });
   }
-
 }
