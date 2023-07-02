@@ -1,13 +1,13 @@
 <section class="bg-color">
   <div class="container">
     <div class="pt-4 pb-4">
-      <a href="#" routerLink="/category/index" class="btn btn-primary"
+      <a href="#" routerLink="/category/index" class="btn btn-danger btn-md"
         >Go Back</a
       >
     </div>
     <div class="row">
       <div class="col d-flex justify-content-start">
-        <h1 class="text-start pt-3 pb-4">List a parcel</h1>
+        <h1 class="text-primary pt-3 pb-4">List a parcel</h1>
       </div>
       <div class="col d-flex justify-content-end">
         <img
@@ -17,8 +17,8 @@
       </div>
     </div>
     <form [formGroup]="form" (ngSubmit)="submit()">
-      <div class="form-group">
-        <label for="name">Tracking Code:</label>
+      <div class="form-group pt-2">
+        <label for="name" class="fw-semibold pb-2 text-danger"><h5>Tracking Code:</h5></label>
         <input
           formControlName="name"
           id="name"
@@ -30,20 +30,20 @@
           class="alert alert-danger"
         >
           <div *ngIf="f['name'].errors && f['name'].errors['required']">
-            Name is required.
+            Tracking Code is required.
           </div>
         </div>
       </div>
 
-      <div class="form-group">
-        <label for="description">Status:</label>
-        <textarea
+      <div class="form-group pt-2 pb-2">
+        <label for="description" class="fw-semibold pb-2 text-danger"><h5>Status:</h5></label>
+        <input
           formControlName="description"
           id="description"
           type="text"
           class="form-control"
-        >
-        </textarea>
+        />
+
         <div
           *ngIf="f['description'].touched && f['description'].invalid"
           class="alert alert-danger"
@@ -53,11 +53,11 @@
               f['description'].errors && f['description'].errors['required']
             "
           >
-            Description is required.
+            Parcel status is required.
           </div>
         </div>
       </div>
-      <div class="pb-5">
+      <div class="pb-5 pt-2 d-flex justify-content-end">
         <button
           class="btn btn-primary"
           type="button"
@@ -100,7 +100,7 @@
           </button>
           <button
             data-dismiss="modal"
-            class="btn btn-primary"
+            class="btn btn-success"
             type="submit"
             (click)="submit()"
             [disabled]="!form.valid"
