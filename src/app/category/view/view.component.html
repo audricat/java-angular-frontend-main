@@ -1,20 +1,27 @@
-<div class="container">
-  <h1>View Category</h1>
+<section class="bg-color">
+  <div class="p-5">
+    <div class="card container">
+       <!-- <a href="#" routerLink="/category/index" class="btn btn-primary">Back</a> -->
+      <a href="#" routerLink="/category/index" class="btn btn-danger btn-md"
+        >Go Back</a
+      >
+      <h1>Parcel Information</h1>
 
-  <a href="#" routerLink="/category/index" class="btn btn-primary">Back</a>
 
-  <div>
-    <strong>ID:</strong>
-    <p>{{ category.id }}</p>
+      <div>
+        <strong>ID:</strong>
+        <p>{{ category.id }}</p>
+      </div>
+
+      <div>
+        <strong>Tracking Code:</strong>
+        <p>{{ category.name }}</p>
+      </div>
+
+      <div>
+        <strong>Status:</strong>
+        <p>{{ category.description }}</p>
+      </div>
+    </div>
   </div>
-
-  <div>
-    <strong>Tracking Code:</strong>
-    <p>{{ category.name }}</p>
-  </div>
-
-  <div>
-    <strong>Status:</strong>
-    <p>{{ category.description }}</p>
-  </div>
-</div>
+</section>
