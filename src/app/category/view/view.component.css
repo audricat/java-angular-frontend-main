@@ -1,0 +1,17 @@
+.bg-color {
+  height: 79vh;
+background: linear-gradient(to bottom right,#e2991a, #f02929) !important;
+}
+
+.box:after {
+  content: ' ';
+  border-top: 79vh solid transparent;
+  border-right: 99vw solid #e03d3d;
+  width: 0;
+  position: absolute;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+}

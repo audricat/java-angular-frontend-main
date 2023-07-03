@@ -1,36 +1,54 @@
 <div class="container">
-    <h1>Update Category</h1>
+  <!-- <div class="card">
+  <p>A glass-like card to demonstrate the <strong>Glassmorphism UI design</strong> trend.</p>
+  <p class="card-footer">Created by Rahul C.</p>
+</div> -->
 
-    <a href="#" routerLink="/category/index" class="btn btn-primary">Back</a>
+  <h1>Update Category</h1>
 
-    <form [formGroup]="form" (ngSubmit)="submit()">
+  <a href="#" routerLink="/category/index" class="btn btn-primary">Back</a>
 
-        <div class="form-group">
-            <label for="name">Tracking Code:</label>
-            <input
-                formControlName="name"
-                id="name"
-                type="text"
-                [(ngModel)]="category.name"
-                class="form-control">
-            <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
-                <div *ngIf="f['name'].errors && f['name'].errors['required']">Name is required.</div>
-            </div>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form-group">
+      <label for="name">Tracking Code:</label>
+      <input
+        formControlName="name"
+        id="name"
+        type="text"
+        [(ngModel)]="category.name"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['name'].touched && f['name'].invalid"
+        class="alert alert-danger"
+      >
+        <div *ngIf="f['name'].errors && f['name'].errors['required']">
+          Name is required.
         </div>
+      </div>
+    </div>
 
-        <div class="form-group">
-            <label for="description">Status:</label>
-            <textarea
-                formControlName="description"
-                id="description"
-                type="text"
-                [(ngModel)]="category.description"
-                class="form-control">
-            </textarea>
-            <div *ngIf="f['description'].touched && f['description'].invalid" class="alert alert-danger">
-                <div *ngIf="f['description'].errors && f['description'].errors['required']">Description is required.</div>
-            </div>
+    <div class="form-group">
+      <label for="description">Status:</label>
+      <textarea
+        formControlName="description"
+        id="description"
+        type="text"
+        [(ngModel)]="category.description"
+        class="form-control"
+      >
+      </textarea>
+      <div
+        *ngIf="f['description'].touched && f['description'].invalid"
+        class="alert alert-danger"
+      >
+        <div
+          *ngIf="f['description'].errors && f['description'].errors['required']"
+        >
+          Description is required.
         </div>
+      </div>
+    </div>
 
         <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#exampleModal" [disabled]="!form.valid">
           Update
@@ -57,4 +75,3 @@
         </div>
       </div>
     </div>
-</div>
