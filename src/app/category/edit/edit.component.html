@@ -1,60 +1,81 @@
-<div class="container">
-  <!-- <div class="card">
-  <p>A glass-like card to demonstrate the <strong>Glassmorphism UI design</strong> trend.</p>
-  <p class="card-footer">Created by Rahul C.</p>
-</div> -->
-
-  <h1>Update Category</h1>
-
-  <a href="#" routerLink="/category/index" class="btn btn-primary">Back</a>
-
-  <form [formGroup]="form" (ngSubmit)="submit()">
-    <div class="form-group">
-      <label for="name">Tracking Code:</label>
-      <input
-        formControlName="name"
-        id="name"
-        type="text"
-        [(ngModel)]="category.name"
-        class="form-control"
-      />
-      <div
-        *ngIf="f['name'].touched && f['name'].invalid"
-        class="alert alert-danger"
+<section class="bg-color">
+  <div class="container">
+    <div class="pt-4 pb-4">
+      <a href="#" routerLink="/category/index" class="btn btn-danger btn-md"
+        >Go Back</a
       >
-        <div *ngIf="f['name'].errors && f['name'].errors['required']">
-          Name is required.
+    </div>
+    <div class="card pr-5 pt-4 pl-5 pb-3">
+      <div class="row">
+        <div class="col d-flex justify-content-start">
+          <h1 class="text-success pt-3 pb-4">Update Parcel</h1>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <img
+            class="img-responsive icon-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWqKIeOL5lPbJME3sQ3SQeLorNXpUkgp3H0g&usqp=CAU"
+          />
         </div>
       </div>
-    </div>
-
-    <div class="form-group">
-      <label for="description">Status:</label>
-      <textarea
-        formControlName="description"
-        id="description"
-        type="text"
-        [(ngModel)]="category.description"
-        class="form-control"
-      >
-      </textarea>
-      <div
-        *ngIf="f['description'].touched && f['description'].invalid"
-        class="alert alert-danger"
-      >
-        <div
-          *ngIf="f['description'].errors && f['description'].errors['required']"
-        >
-          Description is required.
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form-group pt-1">
+          <label for="name">Tracking Code:</label>
+          <input
+            formControlName="name"
+            id="name"
+            type="text"
+            [(ngModel)]="category.name"
+            class="form-control"
+          />
+          <div
+            *ngIf="f['name'].touched && f['name'].invalid"
+            class="alert alert-danger"
+          >
+            <div *ngIf="f['name'].errors && f['name'].errors['required']">
+              Name is required.
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#exampleModal" [disabled]="!form.valid">
-          Update
-        </button>
-    </form>
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="form-group pt-1 pb-1">
+          <label for="description">Status:</label>
+          <input
+            formControlName="description"
+            id="description"
+            type="text"
+            [(ngModel)]="category.description"
+            class="form-control"
+          />
+          <div
+            *ngIf="f['description'].touched && f['description'].invalid"
+            class="alert alert-danger"
+          >
+            <div
+              *ngIf="
+                f['description'].errors && f['description'].errors['required']
+              "
+            >
+              Description is required.
+            </div>
+          </div>
+        </div>
+        <div class="pb-3 pt-3 d-flex justify-content-end">
+          <button
+            class="btn btn-success"
+            type="button"
+            data-toggle="modal"
+            data-target="#exampleModal"
+            [disabled]="!form.valid"
+          >
+            Update
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="pt-5"></div>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -68,10 +89,11 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            <button data-dismiss="modal" class="btn btn-primary" type="submit" (click)="submit()" [disabled]="!form.valid">
-              Yes
+            <button data-dismiss="modal" class="btn btn-success" type="submit" (click)="submit()" [disabled]="!form.valid">
+              Agree
             </button>
-          </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
